@@ -1,0 +1,36 @@
+/ Sales Chart
+const ctx1 = document.getElementById('salesChart').getContext('2d');
+new Chart(ctx1, {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    datasets: [{
+      label: 'Sales ($)',
+      data: [1200, 1900, 3000, 2500, 2200],
+      backgroundColor: '#3498db'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: true }
+    }
+  }
+});
+
+// Users Chart
+const ctx2 = document.getElementById('usersChart').getContext('2d');
+new Chart(ctx2, {
+  type: 'pie',
+  data: {
+    labels: ['Admins', 'Editors', 'Viewers'],
+    datasets: [{
+      label: 'User Roles',
+      data: [10, 20, 30],
+      backgroundColor: ['#e74c3c', '#f1c40f', '#2ecc71']
+    }]
+  },
+  options: {
+    responsive: true
+  }
+});
